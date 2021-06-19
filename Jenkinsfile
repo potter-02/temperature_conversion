@@ -1,9 +1,9 @@
 #!/usr/bin/env groovy
 build_dependents_repo = 'https://github.com/potter-02/temperature_conversion.git'
 pipeline {
-//   agent {
-//     label 'Jenkins slave'
-//   }
+  agent {
+    label 'any'
+  }
   environment {
     EMAIL_TO = 'harshamandava02@gmail.com'
   }
