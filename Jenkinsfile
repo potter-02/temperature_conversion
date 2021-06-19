@@ -28,6 +28,7 @@ pipeline {
         sh '''
         cd $WORKSPACE/
         ls -ltra
+        chmod 755 temperature.py
         ./temperature.py
          '''
       }
