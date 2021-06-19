@@ -28,7 +28,6 @@ pipeline {
       stage('python build'){
       steps {
         cd $WORKSPACE
-        ls -ltra
         sh 'temperature.py'
       }
     }
