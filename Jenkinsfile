@@ -18,11 +18,11 @@ pipeline {
       checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: '95364d96-038a-4a70-a9cb-3b34e89c3815', url: 'https://github.com/potter-02/temperature_conversion.git']]])
         }
   }
-      stage('dependency installs') {
-        steps {
-                sh 'pip install -r requirements.txt'
-        }   
-    }
+//       stage('dependency installs') {
+//         steps {
+//                 sh 'pip install -r requirements.txt'
+//         }   
+//     }
       stage('python build'){
       steps {
         cd $WORKSPACE
