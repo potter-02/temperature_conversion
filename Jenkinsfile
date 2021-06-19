@@ -19,7 +19,7 @@ pipeline {
     steps {
       checkout([$class: 'GitSCM', branches: [
             [name: * /master]], [[$class: 'RelativeTargetDirectory', relativeTargetDir: '/tmp/' [
-              [credentialsId: 'github login token', url: build_dependents_repo]]])
+              [credentialsId: '95364d96-038a-4a70-a9cb-3b34e89c3815', url: build_dependents_repo]]])
         }
   }
       stage('dependency installs') {
