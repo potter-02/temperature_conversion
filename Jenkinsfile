@@ -25,8 +25,11 @@ pipeline {
 //     }
       stage('python build'){
       steps {
+        sh '''
         cd $WORKSPACE/temperature_pipeline/
-        sh 'temperature.py'
+        ls -ltra
+        'temperature.py'
+         '''
       }
     }
 //  post {
