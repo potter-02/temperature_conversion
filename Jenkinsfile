@@ -28,7 +28,7 @@ pipeline {
         sh '''
         cd $WORKSPACE/
         ls -ltra
-        'temperature.py'
+        ./temperature.py
          '''
       }
     }
