@@ -29,7 +29,11 @@ pipeline {
     }
       stage('python build'){
       steps {
+        '''
+        cd $WORKSPACE/build_dependents_repo
+        ls -ltra
         sh 'temperature.py'
+        '''
       }
     }
   }
