@@ -27,19 +27,17 @@ pipeline {
     }
       stage('python build'){
       steps {
-        '''
-        cd $WORKSPACE/build_dependents_repo
+        cd $WORKSPACE
         ls -ltra
         sh 'temperature.py'
-        '''
       }
     }
- post {
-    failure {
-        emailtext body: 'build status body'
-        to: 'harshamandava02@gmail.com'
-        subject: 'Build success/failed/unstable/etc $PROJECT_NAME - $BUILD_NUMBER'
-      }
-    }
+//  post {
+//     failure {
+//         emailtext body: 'build status body'
+//         to: 'harshamandava02@gmail.com'
+//         subject: 'Build success/failed/unstable/etc $PROJECT_NAME - $BUILD_NUMBER'
+//       }
+//     }
   }
 }
