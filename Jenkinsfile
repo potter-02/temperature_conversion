@@ -18,7 +18,7 @@ pipeline {
     stage('git checkout'){
     steps {
       checkout([$class: 'GitSCM', branches: [
-            [name: origin/master]], [[$class: 'RelativeTargetDirectory', relativeTargetDir: '/tmp' [
+            [name: origin/main]], [[$class: 'RelativeTargetDirectory', relativeTargetDir: '/tmp' [
               [credentialsId: '95364d96-038a-4a70-a9cb-3b34e89c3815', url: build_dependents_repo]]])
         }
   }
