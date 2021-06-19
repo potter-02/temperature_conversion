@@ -26,7 +26,7 @@ pipeline {
       stage('python build'){
       steps {
         sh '''
-        cd $WORKSPACE/temperature_pipeline/
+        cd $WORKSPACE/
         ls -ltra
         'temperature.py'
          '''
