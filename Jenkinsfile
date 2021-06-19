@@ -1,12 +1,11 @@
 #!/usr/bin/env groovy
-build_dependents_repo = git@url
-
+build_dependents_repo = 'https://github.com/potter-02/temperature_conversion.git'
 pipeline {
   agent {
     label 'Jenkins slave'
   }
   environment {
-    EMAIL_TO = 'DL or specific email ids'
+    EMAIL_TO = 'harshamandava02@gmail.com'
   }
 
   stages {
@@ -19,7 +18,7 @@ pipeline {
     stage('git checkout'){
     steps {
       checkout([$class: 'GitSCM', branches: [
-            [name: * /<branch-name>]], [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'directory name wher you want your code to checkout' [
+            [name: * /master]], [[$class: 'RelativeTargetDirectory', relativeTargetDir: '/tmp/' [
               [credentialsId: 'github login token', url: build_dependents_repo]]])
         }
   }
@@ -30,14 +29,14 @@ pipeline {
     }
       stage('python build'){
       steps {
-        sh 'python test.py'
+        sh 'temperature.py'
       }
     }
   }
  post {
     failure {
         emailtext body: 'build status body'
-        to: DL or emailids
+        to: 'harshamandava02@gmail.com'
         subject: 'Build success/failed/unstable/etc $PROJECT_NAME - $BUILD_NUMBER'
       }
     }
