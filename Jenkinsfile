@@ -25,7 +25,7 @@ pipeline {
 //     }
       stage('python build'){
       steps {
-        cd $WORKSPACE
+        cd $WORKSPACE/temperature_pipeline/
         sh 'temperature.py'
       }
     }
