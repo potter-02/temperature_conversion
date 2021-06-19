@@ -1,7 +1,6 @@
 import sys
 print ("Please Enter the Input of the temperature Unit:")
 print ("")
-
 FROM = input("Type 'C'(celsius)', 'F'(fahrenheit), 'K'(kelvin), 'R'(rankine) :").upper()
 print(FROM)
 if FROM == "C" or FROM == "F" or FROM == "K" or FROM == "R":
