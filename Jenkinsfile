@@ -8,12 +8,12 @@ pipeline {
     EMAIL_TO = 'harshamandava02@gmail.com'
   }
 
-//   stages {
-//     stage('cleanworkspace') {
-//       steps {
-//         cleanWs()
-//       }
-//     }
+  stages {
+    stage('cleanworkspace') {
+      steps {
+        cleanWs()
+      }
+    }
 
     stage('git checkout'){
     steps {
@@ -34,7 +34,6 @@ pipeline {
         '''
       }
     }
-  }
  post {
     failure {
         emailtext body: 'build status body'
