@@ -2,7 +2,6 @@
 build_dependents_repo = 'https://github.com/potter-02/temperature_conversion.git'
 pipeline {
   agent {
-    label 'any'
   }
   environment {
     EMAIL_TO = 'harshamandava02@gmail.com'
