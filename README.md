@@ -1,5 +1,5 @@
 # temperature_conversion
-1.Run the jenkinsfile after generating a new credentialsId in local jenkins. You can generate it in Pipeline syntax.
+1. Run the jenkinsfile after generating a new credentialsId in local jenkins. You can generate it in Pipeline syntax.
 
 2. Make sure webhook is configured on your Git and Jenkins
 
